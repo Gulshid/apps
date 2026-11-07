@@ -4,22 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Gulshid Zada: FitTrack and Berry Dash Apps</title>
-<meta name="description" content="Android apps by Gulshid Zada: FitTrack, a calorie tracker with an AI nutrition coach, and Berry Dash, an endless runner game. Get both on Google Play.">
-<link rel="canonical" href="https://gulshid.github.io/fittrack/">
+<meta name="description" content="Android apps by Gulshid Zada: FitTrack, a calorie tracker with an AI nutrition coach, Berry Dash, an endless runner game, and Smart Todo, a task manager that understands plain text. Get them on Google Play.">
+<link rel="canonical" href="https://gulshid.github.io/apps/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Gulshid Zada">
 <meta property="og:title" content="Gulshid Zada: FitTrack and Berry Dash Apps">
 <meta property="og:description" content="Android apps by Gulshid Zada: FitTrack, a calorie tracker with an AI nutrition coach, and Berry Dash, an endless runner game.">
-<meta property="og:url" content="https://gulshid.github.io/fittrack/">
-<meta property="og:image" content="https://gulshid.github.io/fittrack/og-image.jpg">
+<meta property="og:url" content="https://gulshid.github.io/apps/">
+<meta property="og:image" content="https://gulshid.github.io/apps/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="FitTrack and Berry Dash app icons on a dark green background">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Gulshid Zada: FitTrack and Berry Dash Apps">
 <meta name="twitter:description" content="Android apps by Gulshid Zada: FitTrack, a calorie tracker, and Berry Dash, an endless runner game.">
-<meta name="twitter:image" content="https://gulshid.github.io/fittrack/og-image.jpg">
+<meta name="twitter:image" content="https://gulshid.github.io/apps/og-image.jpg">
 <meta name="theme-color" content="#09110D">
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,9 +30,9 @@
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://gulshid.github.io/fittrack/#gulshid",
+      "@id": "https://gulshid.github.io/apps/#gulshid",
       "name": "Gulshid Zada",
-      "url": "https://gulshid.github.io/fittrack/",
+      "url": "https://gulshid.github.io/apps/",
       "email": "mailto:gulshidzada4@gmail.com"
     },
     {
@@ -42,7 +42,7 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "url": "https://gulshid.github.io/fittrack/apps/fittrack/",
+          "url": "https://gulshid.github.io/apps/apps/fittrack/",
           "item": {
             "@type": "SoftwareApplication",
             "name": "FitTrack",
@@ -54,7 +54,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "url": "https://gulshid.github.io/fittrack/apps/berry-dash/",
+          "url": "https://gulshid.github.io/apps/apps/berry-dash/",
           "item": {
             "@type": "VideoGame",
             "name": "Berry Dash",
@@ -62,6 +62,18 @@
             "operatingSystem": "Android",
             "applicationCategory": "Game",
             "downloadUrl": "https://play.google.com/store/apps/details?id=com.gulshid.berry"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://gulshid.github.io/apps/apps/smart-todo/",
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Smart Todo",
+            "operatingSystem": "Android",
+            "applicationCategory": "ProductivityApplication",
+            "downloadUrl": "https://play.google.com/store/apps/details?id=com.gulshid.mytodoapp"
           }
         }
       ]
@@ -133,7 +145,7 @@ img { display: block; max-width: 100%; }
 .apps-head { margin-top: 48px; display: flex; align-items: end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 .apps-head h2 { font-family: var(--display); font-weight: 600; font-size: clamp(1.9rem, 4vw, 2.6rem); letter-spacing: -0.02em; margin-top: 12px; }
 .apps { display: grid; gap: 22px; grid-template-columns: 1fr; margin-top: 36px; }
-@media (min-width: 900px) { .apps { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .apps { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); } }
 .app {
   position: relative; display: flex; flex-direction: column; gap: 22px; min-width: 0;
   background: var(--surface); border: 1px solid var(--line); border-radius: 28px; padding: 32px;
@@ -143,6 +155,10 @@ img { display: block; max-width: 100%; }
 .app::before { content: ""; position: absolute; inset: 0 0 auto; height: 4px; background: var(--accent); }
 .app.fit { --accent: linear-gradient(90deg, #6DB990, #FFC107); }
 .app.berry { --accent: linear-gradient(90deg, #E84A8C, #FF9F43); }
+.app.todo { --accent: linear-gradient(90deg, #2EC9B5, #29B6E5); }
+.todo li svg { color: #2EC9B5; }
+.todo .store { background: #E6FAF7; color: #0F1F26; }
+.todo .details:hover { color: #2EC9B5; }
 .app-top { display: flex; align-items: center; gap: 18px; }
 .app-icon { width: 84px; height: 84px; border-radius: 24px; flex: 0 0 auto; overflow: hidden; background: var(--green-deep); box-shadow: 0 16px 30px -16px rgba(0,0,0,.6); }
 .app-icon img { width: 100%; height: 100%; object-fit: cover; }
@@ -286,6 +302,30 @@ footer { margin-top: 64px; padding-block: 34px 44px; border-top: 1px solid var(-
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </article>
+
+    <article class="app todo" aria-labelledby="todo-title">
+      <div class="app-top">
+        <div class="app-icon"><img src="apps/smart-todo/images/icon.png" width="84" height="84" alt="Smart Todo app icon"></div>
+        <div>
+          <span class="tag">Productivity</span>
+          <h3 id="todo-title">Smart Todo</h3>
+        </div>
+      </div>
+      <p class="app-desc">A task manager that reads plain text. Type “call mom tomorrow 5pm urgent” and it sets the date, time and priority for you.</p>
+      <ul>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Reminders and alarms, rescheduled after a restart.</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Focus mode, voice input and points with badges.</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>English and Urdu. Tasks stay on your device.</li>
+      </ul>
+      <div class="app-actions">
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.gulshid.mytodoapp" target="_blank" rel="noopener">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.4 13.6 12 4.2 21.6c-.3-.2-.5-.6-.5-1V3.4c0-.4.2-.8.5-1zM15 10.6l2.5-2.5 3.9 2.2c.8.5.8 1.3 0 1.8l-3.9 2.2L15 13.4 12.7 12 15 10.6zM5 2.1l9.2 5.2-2.5 2.5L5 2.1zm0 19.8 6.7-7.4 2.5 2.5L5 21.9z"/></svg>
+          <span><small>Get it on</small><strong>Google Play</strong></span>
+        </a>
+        <a class="details" href="apps/smart-todo/">See Smart Todo
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
   </div>
 
   <section class="privacy" id="privacy" aria-labelledby="privacy-title">
@@ -296,6 +336,7 @@ footer { margin-top: 64px; padding-block: 34px 44px; border-top: 1px solid var(-
     <nav aria-label="Privacy policies">
       <a href="apps/fittrack/privacy.html">FitTrack</a>
       <a href="apps/berry-dash/privacy.html">Berry Dash</a>
+      <a href="apps/smart-todo/privacy.html">Smart Todo</a>
     </nav>
   </section>
 </main>
