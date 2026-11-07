@@ -226,6 +226,12 @@ section { padding-block: 48px; border-top: 1px solid var(--line); }
 }
 @media (prefers-reduced-motion: reduce) { .shots .phone { transition: none; } }
 
+/* Screens strip: always scrolls from the first screen to the last, starting at the left edge */
+.shots { overflow-x: auto; justify-content: flex-start; padding: 14px 4px 18px; scroll-padding-inline: 16px;
+  overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; }
+@media (min-width: 880px) { .shots { justify-content: flex-start; overflow-x: auto; } }
+.shots::after { content: ""; flex: 0 0 20px; }
+
 /* Apps */
 .apps { display: grid; gap: 16px; }
 .app {
