@@ -1,0 +1,25 @@
+<svg width="146" height="146" viewBox="0 0 146 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="73" cy="73" r="62" stroke="#1A3C2B" stroke-width="2.2" fill="none"/>
+  <circle cx="73" cy="73" r="56" fill="#1A3C2B"/>
+
+  <!-- Flame outer (same as before) -->
+  <path d="M73 28C73 28 92 50 92 70C92 81 83 90 73 90C63 90 54 81 54 70C54 60 60 52 60 52C60 52 58 65 68 68C65 60 68 44 73 28Z" fill="white"/>
+
+  <!-- Flame inner yellow — more visible, brighter, larger -->
+  <path d="M73 48C73 48 84 61 84 72C84 78 79 84 73 84C67 84 62 78 62 72C62 65 66 58 66 58C66 58 65 68 71 70C69 63 70 54 73 48Z" fill="#FCFD75"/>
+
+  <!-- Spark dots — bigger and brighter -->
+  <circle cx="89" cy="44" r="5" fill="#FCFD75"/>
+  <circle cx="96" cy="59" r="3.5" fill="#FCFD75" opacity="0.9"/>
+  <circle cx="55" cy="43" r="3" fill="#FCFD75" opacity="0.8"/>
+
+  <!-- Pulse line — thicker, taller peaks, more prominent -->
+  <polyline
+    points="36,107 48,107 54,93 61,121 68,93 73,110 78,93 85,121 92,93 98,107 110,107"
+    stroke="#FCFD75"
+    stroke-width="3.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+</svg>
