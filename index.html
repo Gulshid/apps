@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FitTrack: Calorie Tracker App for Android</title>
+<meta name="description" content="FitTrack is a calorie tracker app for Android with an AI nutrition coach, fasting timer, meal planner, and water, sleep and workout logs.">
+<link rel="canonical" href="https://gulshid.github.io/fittrack/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FitTrack">
+<meta property="og:title" content="FitTrack: Calorie Tracker App for Android">
+<meta property="og:description" content="FitTrack is a calorie tracker app for Android with an AI nutrition coach, fasting timer, meal planner, and water, sleep and workout logs.">
+<meta property="og:url" content="https://gulshid.github.io/fittrack/">
+<meta property="og:image" content="https://gulshid.github.io/fittrack/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FitTrack app screens on a dark green background">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FitTrack: Calorie Tracker App for Android">
+<meta name="twitter:description" content="FitTrack is a calorie tracker app for Android with an AI nutrition coach, fasting timer, meal planner, and water, sleep and workout logs.">
+<meta name="twitter:image" content="https://gulshid.github.io/fittrack/og-image.jpg">
+<meta name="theme-color" content="#1A3C2B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232E5E42'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='white' font-family='Georgia,serif' font-weight='700'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FitTrack",
+  "operatingSystem": "Android",
+  "applicationCategory": "HealthApplication",
+  "url": "https://gulshid.github.io/fittrack/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.gulshid.fittrack",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.gulshid.fittrack",
+  "description": "FitTrack is a calorie tracker app for Android with an AI nutrition coach, fasting timer, meal planner, and water, sleep and workout logs.",
+  "featureList": [
+    "Calorie and food diary",
+    "AI nutrition coach",
+    "Fasting timer",
+    "Meal planner and recipes",
+    "Water, sleep and workout tracking",
+    "Weight and body measurement tracking"
+  ]
+}
+</script>
+<style>
+/* Layout: one column that widens into a two-column hero and feature grid on large screens.
+   Palette: forest greens taken from the FitTrack app theme, with a warm cream ground and amber highlight. */
+:root {
+  --bg: #F2EFE9;
+  --surface: #FFFFFF;
+  --ink: #1C1C1E;
+  --ink-soft: #4A5A50;
+  --brand: #1A3C2B;
+  --brand-mid: #2E5E42;
+  --brand-light: #6DB990;
+  --brand-tint: #E3EFE7;
+  --amber: #FFC107;
+  --line: rgba(26, 60, 43, 0.14);
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --body: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B100E;
+    --surface: #132019;
+    --ink: #EDF3EF;
+    --ink-soft: #A9BBB0;
+    --brand: #6DB990;
+    --brand-mid: #2E5E42;
+    --brand-light: #6DB990;
+    --brand-tint: #1A3C2B;
+    --amber: #FFC107;
+    --line: rgba(109, 185, 144, 0.22);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B100E;
+  --surface: #132019;
+  --ink: #EDF3EF;
+  --ink-soft: #A9BBB0;
+  --brand: #6DB990;
+  --brand-mid: #2E5E42;
+  --brand-light: #6DB990;
+  --brand-tint: #1A3C2B;
+  --amber: #FFC107;
+  --line: rgba(109, 185, 144, 0.22);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+  -webkit-font-smoothing: antialiased;
+}
+*, *::before, *::after { box-sizing: border-box; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 1120px; margin-inline: auto; }
+
+/* Header */
+.top {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; padding-block: 20px;
+}
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.1rem; text-decoration: none; letter-spacing: -0.01em; }
+.mark {
+  width: 34px; height: 34px; border-radius: 10px; background: var(--brand-mid);
+  display: grid; place-items: center; color: #fff; font-family: var(--display); font-weight: 700;
+}
+.top nav { display: flex; gap: 20px; font-size: 0.95rem; font-weight: 600; }
+.top nav a { text-decoration: none; color: var(--ink-soft); }
+.top nav a:hover { color: var(--ink); }
+@media (max-width: 560px) { .top nav a:not(.keep) { display: none; } }
+
+/* Hero */
+.hero {
+  display: grid; gap: 40px; align-items: center;
+  padding-block: 40px 56px;
+}
+@media (min-width: 880px) { .hero { grid-template-columns: 1.1fr 0.9fr; padding-block: 64px 80px; } }
+.eyebrow {
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--brand); margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(2.3rem, 6vw, 4rem); line-height: 1.04; letter-spacing: -0.02em;
+}
+.hero h1 em { font-style: italic; color: var(--brand-mid); font-weight: 600; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero h1 em { color: var(--brand-light); } }
+:root[data-theme="dark"] .hero h1 em { color: var(--brand-light); }
+.lede { margin-top: 20px; font-size: 1.1rem; color: var(--ink-soft); max-width: 36rem; }
+
+.actions { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; }
+.store {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: var(--ink); color: var(--bg); text-decoration: none;
+  padding: 12px 22px 12px 16px; border-radius: 12px; font-weight: 600;
+}
+.store small { display: block; font-size: 0.7rem; font-weight: 500; opacity: 0.8; letter-spacing: 0.02em; }
+.store strong { display: block; font-size: 1.15rem; line-height: 1.1; }
+.store:hover { opacity: 0.92; }
+.note { font-size: 0.9rem; color: var(--ink-soft); }
+
+/* Hero panel: describes what a day in the app covers, without invented numbers */
+.panel {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 22px;
+  padding: 24px; min-width: 0;
+}
+.panel h2 { font-family: var(--display); font-size: 1.35rem; font-weight: 600; margin-bottom: 14px; }
+.panel ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.panel li {
+  display: flex; justify-content: space-between; gap: 12px; padding-block: 12px;
+  border-top: 1px solid var(--line); font-size: 0.95rem;
+}
+.panel li:first-child { border-top: 0; }
+.panel li span:last-child { color: var(--ink-soft); text-align: right; }
+.pill {
+  display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 999px;
+  background: var(--brand-tint); color: var(--brand);
+}
+
+/* Sections */
+section { padding-block: 48px; border-top: 1px solid var(--line); }
+.head { max-width: 640px; margin-bottom: 28px; }
+.head h2 { font-family: var(--display); font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 600; letter-spacing: -0.015em; line-height: 1.12; }
+.head p { margin-top: 12px; color: var(--ink-soft); font-size: 1.02rem; }
+
+.features { display: grid; gap: 14px; grid-template-columns: 1fr; }
+@media (min-width: 620px) { .features { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .features { grid-template-columns: repeat(3, 1fr); } }
+.feature {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+  padding: 22px; min-width: 0;
+}
+.feature h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+.feature p { font-size: 0.95rem; color: var(--ink-soft); }
+
+/* Screens: a horizontal strip inside its own scroller, so the page itself never scrolls sideways */
+.shots { display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; }
+@media (min-width: 880px) { .shots { justify-content: center; overflow-x: visible; } }
+.shots figure { margin: 0; flex: 0 0 min(250px, 70vw); scroll-snap-align: start; min-width: 0; }
+.shots img { display: block; width: 100%; height: auto; border-radius: 22px; border: 1px solid var(--line); }
+.shots figcaption { margin-top: 12px; font-size: 0.92rem; font-weight: 600; text-align: center; color: var(--ink-soft); }
+
+/* Screens: phone-style frames, a scroll-driven entrance, and a lift on hover */
+.shots { padding-top: 14px; padding-bottom: 14px; }
+.shots figure.shot { margin: 0; flex: 0 0 min(250px, 70vw); min-width: 0; scroll-snap-align: start;
+  display: flex; flex-direction: column; align-items: center; }
+.shots .phone { width: 100%; padding: 9px; border-radius: 40px;
+  background: linear-gradient(160deg, #2A3A32, #0B120E);
+  box-shadow: 0 30px 60px -28px rgba(15, 35, 24, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.45s ease; }
+.shots .phone img { display: block; width: 100%; height: auto; border: 0; border-radius: 31px; }
+.shots figure.shot:hover .phone { transform: translateY(-8px);
+  box-shadow: 0 40px 70px -30px rgba(15, 35, 24, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.12); }
+.shots figure.shot figcaption { margin-top: 16px; padding: 6px 14px; border-radius: 999px;
+  background: var(--brand-tint); color: var(--brand); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.02em; }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .shots figure.shot { animation: shotIn linear both; animation-timeline: view();
+      animation-range: entry 0% entry 55%; }
+    .shots figure.shot:nth-child(2) { animation-range: entry 6% entry 61%; }
+    .shots figure.shot:nth-child(3) { animation-range: entry 12% entry 67%; }
+    .shots figure.shot:nth-child(4) { animation-range: entry 18% entry 73%; }
+    .shots figure.shot:nth-child(5) { animation-range: entry 24% entry 79%; }
+    .shots figure.shot:nth-child(6) { animation-range: entry 30% entry 85%; }
+    .shots figure.shot:nth-child(7) { animation-range: entry 36% entry 91%; }
+    @keyframes shotIn {
+      from { opacity: 0; transform: translateY(56px) scale(0.94); }
+      to { opacity: 1; transform: none; }
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) { .shots .phone { transition: none; } }
+
+/* Apps */
+.apps { display: grid; gap: 16px; }
+.app {
+  display: grid; gap: 20px; align-items: center;
+  background: var(--brand-tint); border-radius: 22px; padding: 28px; min-width: 0;
+}
+@media (min-width: 720px) { .app { grid-template-columns: 1fr auto; padding: 36px; } }
+.app h3 { font-family: var(--display); font-size: 1.8rem; font-weight: 700; }
+.app .tag { font-size: 0.85rem; font-weight: 700; color: var(--brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+.app p { margin-top: 10px; color: var(--ink-soft); max-width: 36rem; }
+.app ul { margin: 16px 0 0; padding-left: 20px; color: var(--ink-soft); font-size: 0.95rem; display: grid; gap: 4px; }
+
+/* Trust */
+.trust { display: grid; gap: 14px; }
+@media (min-width: 760px) { .trust { grid-template-columns: repeat(3, 1fr); } }
+.trust > div { border-left: 3px solid var(--brand-light); padding: 4px 0 4px 18px; min-width: 0; }
+.trust h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+.trust p { color: var(--ink-soft); font-size: 0.95rem; }
+
+/* CTA + footer */
+.cta {
+  background: var(--brand); color: #F2EFE9; border-radius: 26px; padding: 40px 28px;
+  display: grid; gap: 20px; text-align: left;
+}
+@media (min-width: 720px) { .cta { grid-template-columns: 1fr auto; align-items: center; padding: 48px; } }
+.cta h2 { font-family: var(--display); font-size: clamp(1.6rem, 4vw, 2.3rem); font-weight: 600; line-height: 1.15; }
+.cta p { margin-top: 10px; color: #C9DDD0; }
+.cta .store { background: var(--amber); color: #1C1C1E; }
+footer {
+  margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
+  font-size: 0.9rem; color: var(--ink-soft);
+}
+footer a { color: var(--ink); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero > * { animation: rise 0.6s ease both; }
+  .hero > .panel { animation-delay: 0.12s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+}
+</style>
+</head>
+
+<header class="wrap top">
+  <a class="brand" href="#top" aria-label="FitTrack home"><span class="mark">F</span>FitTrack</a>
+  <nav aria-label="Main">
+    <a href="#features">Features</a>
+    <a href="#apps">Apps</a>
+    <a href="#privacy">Privacy</a>
+    <a class="keep" href="#download">Download</a>
+  </nav>
+</header>
+
+<main class="wrap" id="top">
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Calorie, nutrition and fitness tracker</p>
+      <h1>Log your day. <em>See what changes.</em></h1>
+      <p class="lede">FitTrack is a calorie tracker app for Android. Log food, water, sleep, workouts and weight in one place, then let the AI nutrition coach, fasting timer and meal planner help you act on what you see.</p>
+      <div class="actions" id="download">
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.gulshid.fittrack" target="_blank" rel="noopener">
+          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.4 13.6 12 4.2 21.6c-.3-.2-.5-.6-.5-1V3.4c0-.4.2-.8.5-1zM15 10.6l2.5-2.5 3.9 2.2c.8.5.8 1.3 0 1.8l-3.9 2.2L15 13.4 12.7 12 15 10.6zM5 2.1l9.2 5.2-2.5 2.5L5 2.1zm0 19.8 6.7-7.4 2.5 2.5L5 21.9z"/></svg>
+          <span><small>Get it on</small><strong>Google Play</strong></span>
+        </a>
+        <p class="note">Free to download. Sign in with Google.</p>
+      </div>
+    </div>
+
+    <aside class="panel" aria-label="What a day in FitTrack covers">
+      <h2>One diary for the whole day</h2>
+      <ul>
+        <li><span>Meals and snacks</span><span>Search, scan a barcode or snap a photo</span></li>
+        <li><span>Water</span><span>Quick logs toward your daily goal</span></li>
+        <li><span>Sleep and workouts</span><span>Logged alongside what you ate</span></li>
+        <li><span>Weight and progress</span><span>Charts, body measurements, photos</span></li>
+        <li><span>Coach</span><span><span class="pill">AI</span> advice based on your own logs</span></li>
+      </ul>
+    </aside>
+  </div>
+
+  <section id="screens" aria-labelledby="screens-title">
+    <div class="head">
+      <h2 id="screens-title">A look inside</h2>
+      <p>Screens from the FitTrack listing on Google Play.</p>
+    </div>
+    <div class="shots">
+      <figure class="shot">
+        <div class="phone"><img src="images/splash.webp" width="640" height="1380" loading="lazy" decoding="async" alt="FitTrack splash screen with the app logo and a tagline"></div>
+        <figcaption>Launch</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img src="images/onboarding.webp" width="640" height="1380" loading="lazy" decoding="async" alt="FitTrack welcome screen with the headline Take Control of Your Health, feature chips and a Get Started button"></div>
+        <figcaption>Welcome</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img src="images/gender.webp" width="640" height="1380" loading="lazy" decoding="async" alt="FitTrack setup screen asking for gender to personalise calorie targets"></div>
+        <figcaption>Personal setup</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img src="images/home.webp" width="640" height="1380" loading="lazy" decoding="async" alt="FitTrack home screen showing the week, daily calorie total, water and sleep cards"></div>
+        <figcaption>Today's diary</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img src="images/analytics.webp" width="640" height="1380" loading="lazy" decoding="async" alt="FitTrack analytics screen with current and goal weight and a body analysis gauge"></div>
+        <figcaption>Analytics</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img src="images/recipes.webp" width="640" height="1380" loading="lazy" decoding="async" alt="FitTrack recipes screen with saved recipes and a community tab"></div>
+        <figcaption>Recipes</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="phone"><img src="images/reminders.webp" width="640" height="1380" loading="lazy" decoding="async" alt="FitTrack settings showing daily, meal and workout reminder controls"></div>
+        <figcaption>Reminders</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="features" aria-labelledby="features-title">
+    <div class="head">
+      <h2 id="features-title">Everything you need in one calorie tracker</h2>
+      <p>Start with the food diary and add the rest as you need them. Each feature works on its own, and most of them feed your weekly summary.</p>
+    </div>
+    <div class="features">
+      <article class="feature">
+        <h3>Food diary</h3>
+        <p>Log meals with a search of food databases, a barcode scan or a food photo. Save the foods and recipes you eat often.</p>
+      </article>
+      <article class="feature">
+        <h3>AI nutrition coach</h3>
+        <p>Ask about your day, describe a meal, or get a suggestion for dinner. Replies use your own logs and goals.</p>
+      </article>
+      <article class="feature">
+        <h3>Recipes and meal plans</h3>
+        <p>Build recipes, plan seven days of meals, and turn the plan into a grocery list.</p>
+      </article>
+      <article class="feature">
+        <h3>Water, sleep and workouts</h3>
+        <p>Track water intake, log sleep and record exercise. Each one shows its own trend over time.</p>
+      </article>
+      <article class="feature">
+        <h3>Weight and body measurements</h3>
+        <p>Record your weight, body measurements and progress photos, then watch the trend rather than the daily number.</p>
+      </article>
+      <article class="feature">
+        <h3>Fasting timer</h3>
+        <p>Run intermittent fasting windows with a timer and alerts that match your schedule.</p>
+      </article>
+      <article class="feature">
+        <h3>Supplements and reminders</h3>
+        <p>Keep a list of supplements and medication, and set your own reminders for anything you need to remember.</p>
+      </article>
+      <article class="feature">
+        <h3>Friend challenges</h3>
+        <p>Add friends, join a challenge and see where you rank on the leaderboard. Friends see only your username and challenge results.</p>
+      </article>
+      <article class="feature">
+        <h3>Streaks and achievements</h3>
+        <p>Earn badges for consistent logging and see a weekly summary of what changed.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="apps" aria-labelledby="apps-title">
+    <div class="head">
+      <h2 id="apps-title">Our apps</h2>
+      <p>Each app is available on Google Play for Android.</p>
+    </div>
+    <div class="apps">
+      <article class="app">
+        <div>
+          <p class="tag">Available now</p>
+          <h3>FitTrack</h3>
+          <p>A calorie, nutrition and fitness tracker with a diary, an AI coach, meal plans and a fasting timer.</p>
+          <ul>
+            <li>Works offline. Changes sync when you reconnect.</li>
+            <li>Health Connect sync for steps, active calories and sleep, if you turn it on.</li>
+            <li>Home screen widgets and backup and restore.</li>
+          </ul>
+        </div>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.gulshid.fittrack" target="_blank" rel="noopener">
+          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.4 13.6 12 4.2 21.6c-.3-.2-.5-.6-.5-1V3.4c0-.4.2-.8.5-1zM15 10.6l2.5-2.5 3.9 2.2c.8.5.8 1.3 0 1.8l-3.9 2.2L15 13.4 12.7 12 15 10.6zM5 2.1l9.2 5.2-2.5 2.5L5 2.1zm0 19.8 6.7-7.4 2.5 2.5L5 21.9z"/></svg>
+          <span><small>Get it on</small><strong>Google Play</strong></span>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section id="privacy" aria-labelledby="privacy-title">
+    <div class="head">
+      <h2 id="privacy-title">Your health data stays yours</h2>
+      <p>Health and fitness information is sensitive, so we keep it limited to what the app needs.</p>
+    </div>
+    <div class="trust">
+      <div>
+        <h3>Never sold</h3>
+        <p>We do not sell your data, and we never use your health data for advertising or build advertising profiles.</p>
+      </div>
+      <div>
+        <h3>You choose what to share</h3>
+        <p>Health sync is off until you turn it on. Friends see only your username, display name and challenge results.</p>
+      </div>
+      <div>
+        <h3>Delete it any time</h3>
+        <p>Delete your account in Settings. Account data is removed within 30 days of your request.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="cta-title" style="border-top:0;padding-top:0">
+    <div class="cta">
+      <div>
+        <h2 id="cta-title">Start logging today</h2>
+        <p>Download FitTrack from Google Play and set up your goals in a few minutes.</p>
+      </div>
+      <a class="store" href="https://play.google.com/store/apps/details?id=com.gulshid.fittrack" target="_blank" rel="noopener">
+        <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.4 13.6 12 4.2 21.6c-.3-.2-.5-.6-.5-1V3.4c0-.4.2-.8.5-1zM15 10.6l2.5-2.5 3.9 2.2c.8.5.8 1.3 0 1.8l-3.9 2.2L15 13.4 12.7 12 15 10.6zM5 2.1l9.2 5.2-2.5 2.5L5 2.1zm0 19.8 6.7-7.4 2.5 2.5L5 21.9z"/></svg>
+        <span><small>Get it on</small><strong>Google Play</strong></span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <span>&copy; 2026 FitTrack</span>
+    <span><a href="privacy.html">Privacy policy</a> &middot; Contact: <a href="mailto:gulshidzada4@gmail.com">gulshidzada4@gmail.com</a></span>
+  </footer>
+</main>
