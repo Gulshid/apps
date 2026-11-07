@@ -3,613 +3,307 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>FitTrack: Calorie Tracker App for Android</title>
-<meta name="description" content="FitTrack is a calorie tracker app for Android with an AI nutrition coach, fasting timer, meal planner, and water, sleep and workout logs.">
+<title>Gulshid Zada: FitTrack and Berry Dash Apps</title>
+<meta name="description" content="Android apps by Gulshid Zada: FitTrack, a calorie tracker with an AI nutrition coach, and Berry Dash, an endless runner game. Get both on Google Play.">
 <link rel="canonical" href="https://gulshid.github.io/fittrack/">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="FitTrack">
-<meta property="og:title" content="FitTrack: Calorie Tracker App for Android">
-<meta property="og:description" content="FitTrack is a calorie tracker app for Android with an AI nutrition coach, fasting timer, meal planner, and water, sleep and workout logs.">
+<meta property="og:site_name" content="Gulshid Zada">
+<meta property="og:title" content="Gulshid Zada: FitTrack and Berry Dash Apps">
+<meta property="og:description" content="Android apps by Gulshid Zada: FitTrack, a calorie tracker with an AI nutrition coach, and Berry Dash, an endless runner game.">
 <meta property="og:url" content="https://gulshid.github.io/fittrack/">
 <meta property="og:image" content="https://gulshid.github.io/fittrack/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="FitTrack app screens on a dark green background">
+<meta property="og:image:alt" content="FitTrack and Berry Dash app icons on a dark green background">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FitTrack: Calorie Tracker App for Android">
-<meta name="twitter:description" content="FitTrack is a calorie tracker app for Android with an AI nutrition coach, fasting timer, meal planner, and water, sleep and workout logs.">
+<meta name="twitter:title" content="Gulshid Zada: FitTrack and Berry Dash Apps">
+<meta name="twitter:description" content="Android apps by Gulshid Zada: FitTrack, a calorie tracker, and Berry Dash, an endless runner game.">
 <meta name="twitter:image" content="https://gulshid.github.io/fittrack/og-image.jpg">
-<meta name="theme-color" content="#0F2318">
+<meta name="theme-color" content="#09110D">
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "FitTrack",
-  "operatingSystem": "Android",
-  "applicationCategory": "HealthApplication",
-  "url": "https://gulshid.github.io/fittrack/",
-  "downloadUrl": "https://play.google.com/store/apps/details?id=com.gulshid.fittrack",
-  "installUrl": "https://play.google.com/store/apps/details?id=com.gulshid.fittrack",
-  "description": "FitTrack is a calorie tracker app for Android with an AI nutrition coach, fasting timer, meal planner, and water, sleep and workout logs.",
-  "featureList": [
-    "Calorie and food diary",
-    "AI nutrition coach",
-    "Fasting timer",
-    "Meal planner and recipes",
-    "Water, sleep and workout tracking",
-    "Weight and body measurement tracking"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://gulshid.github.io/fittrack/#gulshid",
+      "name": "Gulshid Zada",
+      "url": "https://gulshid.github.io/fittrack/",
+      "email": "mailto:gulshidzada4@gmail.com"
+    },
+    {
+      "@type": "ItemList",
+      "name": "Apps by Gulshid Zada",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://gulshid.github.io/fittrack/apps/fittrack/",
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "FitTrack",
+            "operatingSystem": "Android",
+            "applicationCategory": "HealthApplication",
+            "downloadUrl": "https://play.google.com/store/apps/details?id=com.gulshid.fittrack"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://gulshid.github.io/fittrack/apps/berry-dash/",
+          "item": {
+            "@type": "VideoGame",
+            "name": "Berry Dash",
+            "gamePlatform": "Android",
+            "operatingSystem": "Android",
+            "applicationCategory": "Game",
+            "downloadUrl": "https://play.google.com/store/apps/details?id=com.gulshid.berry"
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
 <style>
-/* Tokens: forest greens from the FitTrack app theme, warm paper neutrals, one amber highlight */
 :root {
-  --bg: #F4F2EC;
-  --bg-2: #EBE7DD;
-  --surface: #FFFFFF;
-  --ink: #101A14;
-  --ink-soft: #4B5B52;
-  --brand: #1A3C2B;
-  --brand-2: #2E5E42;
-  --brand-3: #6DB990;
-  --tint: #E2EEE6;
-  --amber: #FFC107;
-  --accent: #2E5E42;
-  --line: rgba(16, 26, 20, 0.10);
-  --shadow: 0 1px 2px rgba(16, 26, 20, 0.04), 0 18px 40px -22px rgba(16, 26, 20, 0.22);
-  --display: "Fraunces", Georgia, "Times New Roman", serif;
-  --body: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --radius: 22px;
-  color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #09110D;
-    --bg-2: #0E1A14;
-    --surface: #111E17;
-    --ink: #EDF3EF;
-    --ink-soft: #A7BAAF;
-    --brand: #1A3C2B;
-    --brand-2: #2E5E42;
-    --brand-3: #6DB990;
-    --tint: #16291F;
-    --accent: #6DB990;
-    --line: rgba(237, 243, 239, 0.10);
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 20px 50px -24px rgba(0, 0, 0, 0.7);
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
   --bg: #09110D;
   --bg-2: #0E1A14;
   --surface: #111E17;
   --ink: #EDF3EF;
   --ink-soft: #A7BAAF;
-  --brand: #1A3C2B;
-  --brand-2: #2E5E42;
-  --brand-3: #6DB990;
-  --tint: #16291F;
-  --accent: #6DB990;
   --line: rgba(237, 243, 239, 0.10);
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 20px 50px -24px rgba(0, 0, 0, 0.7);
+  --green: #6DB990;
+  --green-deep: #1A3C2B;
+  --amber: #FFC107;
+  --plum: #2A1238;
+  --pink: #E84A8C;
+  --orange: #FF9F43;
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --body: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color-scheme: dark;
 }
-
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--body);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 16px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased; overflow-x: clip;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
-  overflow-x: clip;
+  background-image:
+    radial-gradient(60% 40% at 85% -5%, rgba(109, 185, 144, 0.16), transparent 70%),
+    radial-gradient(50% 40% at 0% 30%, rgba(232, 74, 140, 0.10), transparent 70%);
+  background-attachment: fixed;
 }
 h1, h2, h3 { margin: 0; text-wrap: balance; }
 p { margin: 0; }
 a { color: inherit; }
-img { max-width: 100%; display: block; }
-:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
-.skip { position: absolute; left: -999px; top: 8px; background: var(--amber); color: #101A14; padding: 8px 14px; border-radius: 8px; z-index: 50; }
+img { display: block; max-width: 100%; }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 8px; }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--amber); color: #09110D; padding: 8px 14px; border-radius: 8px; z-index: 50; }
 .skip:focus { left: 16px; }
 .wrap { max-width: 1160px; margin-inline: auto; }
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--accent);
-}
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--green); }
 .eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; border-radius: 2px; }
 
-/* Buttons */
-.btn {
-  display: inline-flex; align-items: center; gap: 12px;
-  background: var(--ink); color: var(--bg); text-decoration: none;
-  padding: 12px 22px 12px 16px; border-radius: 14px; font-weight: 700;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-  box-shadow: 0 10px 24px -14px rgba(16, 26, 20, 0.55);
-}
-.btn small { display: block; font-size: 0.68rem; font-weight: 600; opacity: 0.75; letter-spacing: 0.04em; line-height: 1.2; }
-.btn strong { display: block; font-size: 1.12rem; line-height: 1.15; font-weight: 800; }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -14px rgba(16, 26, 20, 0.6); }
-.btn.amber { background: var(--amber); color: #101A14; }
-.btn-ghost {
-  display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
-  font-weight: 700; padding: 14px 6px; color: var(--ink);
-}
-.btn-ghost:hover { color: var(--accent); }
-.btn-ghost svg { transition: transform 0.25s ease; }
-.btn-ghost:hover svg { transform: translateX(3px); }
-
 /* Header */
-.top {
-  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
-  margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
-  padding-inline: max(16px, env(safe-area-inset-left, 0px));
-  background: color-mix(in srgb, var(--bg) 82%, transparent);
-  -webkit-backdrop-filter: saturate(160%) blur(12px);
-  backdrop-filter: saturate(160%) blur(12px);
-  border-bottom: 1px solid var(--line);
-}
-.top-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
-.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.12rem; text-decoration: none; letter-spacing: -0.01em; }
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding-inline: max(16px, env(safe-area-inset-left, 0px)); background: rgba(9, 17, 13, 0.82); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.top-in { height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 1.05rem; letter-spacing: -0.01em; }
 .brand img { width: 34px; height: 34px; }
-.nav { display: flex; align-items: center; gap: 26px; font-size: 0.93rem; font-weight: 600; }
+.nav { display: flex; align-items: center; gap: 24px; font-weight: 600; font-size: .93rem; }
 .nav a { text-decoration: none; color: var(--ink-soft); }
 .nav a:hover { color: var(--ink); }
-.nav .btn { padding: 9px 16px 9px 12px; font-size: 0.9rem; border-radius: 11px; box-shadow: none; }
-.nav .btn strong { font-size: 0.98rem; }
-@media (max-width: 760px) { .nav a:not(.btn) { display: none; } }
+@media (max-width: 560px) { .nav a:not(.keep) { display: none; } }
 
 /* Hero */
-.hero {
-  position: relative;
-  display: grid; gap: 48px; align-items: center;
-  padding-block: 56px 72px;
-}
-.hero::before {
-  content: ""; position: absolute; inset: -80px 0 auto; height: 620px; z-index: -1; pointer-events: none;
-  background:
-    radial-gradient(60% 55% at 70% 30%, color-mix(in srgb, var(--brand-3) 28%, transparent), transparent 70%),
-    radial-gradient(45% 45% at 20% 10%, color-mix(in srgb, var(--amber) 14%, transparent), transparent 70%);
-}
-@media (min-width: 960px) { .hero { grid-template-columns: 1.02fr 0.98fr; padding-block: 80px 96px; } }
-.hero h1 {
-  margin-top: 18px;
-  font-family: var(--display); font-weight: 600;
-  font-size: clamp(2.5rem, 6.2vw, 4.4rem); line-height: 1.02; letter-spacing: -0.025em;
-}
-.hero h1 em { font-style: italic; font-weight: 500; color: var(--accent); }
-.lede { margin-top: 22px; font-size: 1.14rem; color: var(--ink-soft); max-width: 35rem; }
-.cta-row { margin-top: 34px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
-.proof { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
-.proof li {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 0.86rem; font-weight: 600; color: var(--ink-soft);
-  padding: 7px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line);
-}
-.proof svg { color: var(--accent); }
+.hero { padding-block: 84px 56px; }
+.hero h1 { margin-top: 18px; font-family: var(--display); font-weight: 600; font-size: clamp(2.6rem, 6.4vw, 4.8rem); line-height: 1.02; letter-spacing: -0.025em; max-width: 14ch; }
+.hero h1 em { font-style: italic; font-weight: 500; color: var(--green); }
+.lede { margin-top: 22px; font-size: 1.14rem; color: var(--ink-soft); max-width: 38rem; }
+.stats { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
+.stats li { font-weight: 700; font-size: .88rem; padding: 8px 14px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); color: var(--ink-soft); }
 
-/* Device composition */
-.device-stage { position: relative; justify-self: center; width: min(100%, 380px); padding: 12px 0 0; }
-.device {
-  position: relative; padding: 10px; border-radius: 44px;
-  background: linear-gradient(160deg, #2A3A32, #0A110D 60%);
-  box-shadow: 0 50px 90px -40px rgba(16, 26, 20, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+/* App cards */
+.apps-head { margin-top: 48px; display: flex; align-items: end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.apps-head h2 { font-family: var(--display); font-weight: 600; font-size: clamp(1.9rem, 4vw, 2.6rem); letter-spacing: -0.02em; margin-top: 12px; }
+.apps { display: grid; gap: 22px; grid-template-columns: 1fr; margin-top: 36px; }
+@media (min-width: 900px) { .apps { grid-template-columns: repeat(2, 1fr); } }
+.app {
+  position: relative; display: flex; flex-direction: column; gap: 22px; min-width: 0;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 28px; padding: 32px;
+  overflow: hidden; transition: transform .35s ease, border-color .35s ease;
 }
-.device img { border-radius: 34px; width: 100%; height: auto; }
-.chip {
-  position: absolute; display: flex; align-items: center; gap: 10px;
-  background: var(--surface); color: var(--ink); border: 1px solid var(--line);
-  padding: 10px 14px; border-radius: 16px; box-shadow: var(--shadow);
-  font-size: 0.86rem; font-weight: 700; white-space: nowrap;
-}
-.chip i {
-  width: 30px; height: 30px; border-radius: 10px; display: grid; place-items: center;
-  background: var(--tint); color: var(--accent); font-style: normal;
-}
-.chip-a { left: -26px; top: 38%; }
-.chip-b { right: -22px; bottom: 16%; }
-@media (max-width: 520px) { .chip-a { left: 0; } .chip-b { right: 0; } }
+.app:hover { transform: translateY(-4px); border-color: rgba(237, 243, 239, 0.22); }
+.app::before { content: ""; position: absolute; inset: 0 0 auto; height: 4px; background: var(--accent); }
+.app.fit { --accent: linear-gradient(90deg, #6DB990, #FFC107); }
+.app.berry { --accent: linear-gradient(90deg, #E84A8C, #FF9F43); }
+.app-top { display: flex; align-items: center; gap: 18px; }
+.app-icon { width: 84px; height: 84px; border-radius: 24px; flex: 0 0 auto; overflow: hidden; background: var(--green-deep); box-shadow: 0 16px 30px -16px rgba(0,0,0,.6); }
+.app-icon img { width: 100%; height: 100%; object-fit: cover; }
+.tag { display: inline-block; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); background: rgba(237,243,239,.07); padding: 5px 10px; border-radius: 8px; }
+.app h3 { font-family: var(--display); font-size: 2.1rem; font-weight: 600; letter-spacing: -0.01em; margin-top: 8px; line-height: 1.1; }
+.app-desc { color: var(--ink-soft); font-size: 1.02rem; }
+.app ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.app li { display: flex; gap: 10px; align-items: flex-start; font-size: .96rem; color: var(--ink-soft); }
+.app li svg { flex: 0 0 auto; margin-top: 4px; color: var(--green); }
+.berry li svg { color: var(--pink); }
+.app-actions { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; padding-top: 6px; }
+.store { display: inline-flex; align-items: center; gap: 12px; background: var(--ink); color: var(--bg); text-decoration: none; padding: 12px 22px 12px 16px; border-radius: 14px; font-weight: 700; transition: transform .25s ease; }
+.store small { display: block; font-size: .68rem; font-weight: 600; opacity: .75; letter-spacing: .04em; line-height: 1.2; }
+.store strong { display: block; font-size: 1.1rem; line-height: 1.15; font-weight: 800; }
+.store:hover { transform: translateY(-2px); }
+.berry .store { background: #FFF6EF; color: var(--plum); }
+.details { font-weight: 700; text-decoration: none; color: var(--ink); display: inline-flex; align-items: center; gap: 8px; }
+.details:hover { color: var(--green); }
+.berry .details:hover { color: var(--pink); }
 
-/* Sections */
-section { padding-block: 96px; }
-.sec-head { max-width: 680px; margin-bottom: 44px; }
-.sec-head h2 {
-  margin-top: 16px;
-  font-family: var(--display); font-weight: 600;
-  font-size: clamp(1.9rem, 4.2vw, 2.9rem); line-height: 1.08; letter-spacing: -0.02em;
-}
-.sec-head p { margin-top: 16px; color: var(--ink-soft); font-size: 1.05rem; }
-.band { background: var(--bg-2); border-block: 1px solid var(--line); }
+/* Hero art: the two app icons */
+.hero { display: grid; gap: 40px; align-items: center; }
+@media (min-width: 900px) { .hero { grid-template-columns: 1.1fr 0.9fr; } }
+.hero-art { position: relative; height: 340px; max-width: 420px; width: 100%; justify-self: center; }
+.hero-art .tile { position: absolute; width: 190px; height: 190px; border-radius: 48px; overflow: hidden; box-shadow: 0 40px 70px -30px rgba(0,0,0,.7), inset 0 0 0 1px rgba(255,255,255,.08); }
+.hero-art .tile img { width: 100%; height: 100%; object-fit: cover; }
+.hero-art .t1 { left: 0; top: 40px; transform: rotate(-6deg); }
+.hero-art .t2 { right: 0; bottom: 20px; transform: rotate(5deg); width: 210px; height: 210px; }
+@media (max-width: 899px) { .hero-art { height: 280px; } .hero-art .tile { width: 160px; height: 160px; border-radius: 40px; } .hero-art .t2 { width: 176px; height: 176px; } }
+@media (prefers-reduced-motion: no-preference) { .hero-art .tile { animation: float 6s ease-in-out infinite; } .hero-art .t2 { animation-delay: -3s; } @keyframes float { 0%,100% { translate: 0 0; } 50% { translate: 0 -10px; } } }
 
-/* Bento features */
-.bento { display: grid; gap: 16px; grid-template-columns: 1fr; }
-@media (min-width: 680px) { .bento { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1000px) { .bento { grid-template-columns: repeat(3, 1fr); } .bento .wide { grid-column: span 2; } }
-.card {
-  position: relative; min-width: 0;
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 28px; box-shadow: var(--shadow);
-  transition: transform 0.35s ease, border-color 0.35s ease;
-}
-.card:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--brand-3) 60%, var(--line)); }
-.ico {
-  width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center;
-  background: var(--tint); color: var(--accent); margin-bottom: 20px;
-}
-.card h3 { font-size: 1.14rem; font-weight: 800; letter-spacing: -0.01em; }
-.card p { margin-top: 8px; color: var(--ink-soft); font-size: 0.97rem; }
-.card ul { margin: 16px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
-.card li { display: flex; gap: 10px; align-items: flex-start; font-size: 0.93rem; color: var(--ink-soft); }
-.card li::before { content: ""; width: 6px; height: 6px; margin-top: 9px; border-radius: 50%; background: var(--brand-3); flex: 0 0 auto; }
-.card.feature-hero { background: linear-gradient(150deg, var(--brand) 0%, #0F2318 100%); color: #EDF3EF; border-color: transparent; }
-.card.feature-hero p, .card.feature-hero li { color: #BFD4C7; }
-.card.feature-hero .ico { background: rgba(255, 255, 255, 0.1); color: var(--amber); }
-.card.feature-hero li::before { background: var(--amber); }
-.card.feature-hero h3 { font-size: 1.6rem; font-family: var(--display); font-weight: 600; }
-@media (max-width: 999px) { .card.feature-hero { grid-column: auto; } }
+/* Privacy band */
+.privacy { margin-top: 56px; padding: 28px 30px; border-radius: 24px; border: 1px solid var(--line); background: var(--bg-2); display: grid; gap: 14px; }
+@media (min-width: 800px) { .privacy { grid-template-columns: 1fr auto; align-items: center; } }
+.privacy h2 { font-family: var(--display); font-weight: 600; font-size: 1.5rem; }
+.privacy p { margin-top: 6px; color: var(--ink-soft); }
+.privacy nav { display: flex; flex-wrap: wrap; gap: 18px; font-weight: 700; }
+.privacy nav a { color: var(--green); text-decoration: none; }
+.privacy nav a:hover { text-decoration: underline; }
 
-/* How it works */
-.steps { display: grid; gap: 0; grid-template-columns: 1fr; counter-reset: step; position: relative; }
-@media (min-width: 820px) { .steps { grid-template-columns: repeat(3, 1fr); } }
-.step { padding: 28px 28px 28px 0; border-top: 2px solid var(--line); position: relative; min-width: 0; }
-.step::before {
-  content: ""; position: absolute; top: -7px; left: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--brand-3);
-}
-.step .n { font-family: var(--display); font-size: 0.95rem; color: var(--accent); font-weight: 600; }
-.step h3 { margin-top: 10px; font-size: 1.3rem; font-weight: 700; font-family: var(--display); }
-.step p { margin-top: 8px; color: var(--ink-soft); }
-@media (max-width: 819px) { .step { padding: 24px 0 24px 0; } }
-
-/* Screens strip */
-.shots { display: flex; gap: 22px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 18px 4px 26px; scroll-padding-inline: 16px; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
-.shots::after { content: ""; flex: 0 0 20px; }
-.shot { margin: 0; flex: 0 0 min(252px, 72vw); min-width: 0; scroll-snap-align: start; display: flex; flex-direction: column; align-items: center; }
-.shot .phone {
-  width: 100%; padding: 9px; border-radius: 40px;
-  background: linear-gradient(160deg, #2A3A32, #0A110D 60%);
-  box-shadow: 0 30px 60px -28px rgba(16, 26, 20, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.45s ease;
-}
-.shot .phone img { width: 100%; height: auto; border-radius: 31px; }
-.shot:hover .phone { transform: translateY(-8px); }
-.shot figcaption {
-  margin-top: 16px; padding: 6px 14px; border-radius: 999px;
-  background: var(--tint); color: var(--accent); font-size: 0.84rem; font-weight: 700;
-}
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .shot { animation: shotIn linear both; animation-timeline: view(); animation-range: entry 0% entry 55%; }
-    .shot:nth-child(2) { animation-range: entry 6% entry 61%; }
-    .shot:nth-child(3) { animation-range: entry 12% entry 67%; }
-    .shot:nth-child(4) { animation-range: entry 18% entry 73%; }
-    .shot:nth-child(5) { animation-range: entry 24% entry 79%; }
-    .shot:nth-child(6) { animation-range: entry 30% entry 85%; }
-    .shot:nth-child(7) { animation-range: entry 36% entry 91%; }
-    @keyframes shotIn { from { opacity: 0; transform: translateY(56px) scale(0.94); } to { opacity: 1; transform: none; } }
-  }
-}
-
-/* Trust */
-.trust { display: grid; gap: 16px; grid-template-columns: 1fr; }
-@media (min-width: 820px) { .trust { grid-template-columns: repeat(3, 1fr); } }
-.trust .card h3 { font-size: 1.2rem; }
-
-/* Apps */
-.app-card {
-  display: grid; gap: 28px; align-items: center;
-  background: var(--surface); border: 1px solid var(--line); border-radius: 28px; padding: 32px; box-shadow: var(--shadow);
-}
-@media (min-width: 800px) { .app-card { grid-template-columns: auto 1fr auto; padding: 40px; } }
-.app-card .logo { width: 96px; height: 96px; }
-.app-card .tag {
-  display: inline-block; font-size: 0.74rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--accent); background: var(--tint); padding: 5px 10px; border-radius: 8px;
-}
-.app-card h3 { margin-top: 12px; font-family: var(--display); font-size: 2rem; font-weight: 600; }
-.app-card p { margin-top: 10px; color: var(--ink-soft); max-width: 40rem; }
-.app-card ul { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
-.app-card li { display: flex; gap: 10px; font-size: 0.95rem; color: var(--ink-soft); }
-.app-card li svg { flex: 0 0 auto; color: var(--accent); margin-top: 3px; }
-
-/* Closing band */
-.closing {
-  position: relative; overflow: hidden;
-  background: radial-gradient(90% 120% at 100% 0%, #2E5E42 0%, transparent 60%), #0F2318;
-  color: #EDF3EF; border-radius: 32px; padding: 56px 28px;
-  display: grid; gap: 28px; align-items: center;
-}
-@media (min-width: 800px) { .closing { grid-template-columns: 1fr auto; padding: 72px; } }
-.closing h2 { font-family: var(--display); font-size: clamp(2rem, 4.6vw, 3.1rem); font-weight: 600; line-height: 1.06; letter-spacing: -0.02em; }
-.closing p { margin-top: 14px; color: #BFD4C7; font-size: 1.05rem; max-width: 34rem; }
-.closing .eyebrow { color: var(--amber); }
-.closing .eyebrow::before { background: var(--amber); }
-
-/* Footer */
-footer { margin-top: 72px; padding-block: 36px 40px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 0.92rem; }
-.foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; }
-.foot nav { display: flex; flex-wrap: wrap; gap: 20px; }
+footer { margin-top: 64px; padding-block: 34px 44px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: .92rem; }
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; align-items: center; }
 .foot a { color: var(--ink); text-decoration: none; font-weight: 600; }
-.foot a:hover { color: var(--accent); }
+.foot a:hover { color: var(--green); }
 
-/* Motion for the hero */
 @media (prefers-reduced-motion: no-preference) {
-  .hero-copy > * { animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-  .hero-copy > *:nth-child(2) { animation-delay: 0.06s; }
-  .hero-copy > *:nth-child(3) { animation-delay: 0.12s; }
-  .hero-copy > *:nth-child(4) { animation-delay: 0.18s; }
-  .device-stage { animation: rise 0.9s 0.1s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-  .chip { animation: float 6s ease-in-out infinite; }
-  .chip-b { animation-delay: -3s; }
+  .hero > .wrap > * { animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
+  .hero > .wrap > *:nth-child(2) { animation-delay: .06s; }
+  .hero > .wrap > *:nth-child(3) { animation-delay: .12s; }
+  .app { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+  .app:nth-child(2) { animation-delay: .1s; }
   @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#apps">Skip to apps</a>
 
 <header class="top">
   <div class="top-in wrap">
-      <a class="brand" href="#top" aria-label="FitTrack home"><img src="images/logo.svg" width="34" height="34" alt="">FitTrack</a>
-      <nav class="nav" aria-label="Main">
-        <a href="#features">Features</a>
-        <a href="#screens">Screens</a>
-        <a href="#apps">Apps</a>
-        <a href="#privacy">Privacy</a>
-        <a class="btn amber" href="https://play.google.com/store/apps/details?id=com.gulshid.fittrack" target="_blank" rel="noopener">
-          <span><small>Get it on</small><strong>Google Play</strong></span>
-        </a>
-      </nav>
+    <a class="brand" href="#top" aria-label="Gulshid Zada home"><img src="images/logo.svg" width="34" height="34" alt="">Gulshid Zada</a>
+    <nav class="nav" aria-label="Main">
+      <a class="keep" href="#apps">Apps</a>
+      <a href="#privacy">Privacy</a>
+      <a href="mailto:gulshidzada4@gmail.com">Contact</a>
+    </nav>
   </div>
 </header>
 
-  <main id="main" class="wrap">
-    <div class="hero" id="top">
-      <div class="hero-copy">
-        <span class="eyebrow">Calorie tracker for Android</span>
-        <h1>Track what you eat. <em>See what changes.</em></h1>
-        <p class="lede">FitTrack is a calorie tracker app that brings your food diary, water, sleep, workouts and weight into one place. The AI nutrition coach and fasting timer help you act on what the numbers show.</p>
-        <div class="cta-row">
-          <a class="btn" href="https://play.google.com/store/apps/details?id=com.gulshid.fittrack" target="_blank" rel="noopener">
-            <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.4 13.6 12 4.2 21.6c-.3-.2-.5-.6-.5-1V3.4c0-.4.2-.8.5-1zM15 10.6l2.5-2.5 3.9 2.2c.8.5.8 1.3 0 1.8l-3.9 2.2L15 13.4 12.7 12 15 10.6zM5 2.1l9.2 5.2-2.5 2.5L5 2.1zm0 19.8 6.7-7.4 2.5 2.5L5 21.9z"/></svg>
-            <span><small>Get it on</small><strong>Google Play</strong></span>
-          </a>
-          <a class="btn-ghost" href="#screens">See the screens
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-        <ul class="proof" aria-label="Highlights">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Works offline</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Sign in with Google</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Health Connect sync</li>
-        </ul>
-      </div>
+<main class="wrap" id="top">
+  <section class="hero" aria-labelledby="hero-title" style="padding-top:64px">
+  <div>
+    <span class="eyebrow">Android apps</span>
+    <h1 id="hero-title">Apps for your <em>health</em> and your downtime.</h1>
+    <p class="lede">Two apps by Gulshid Zada. FitTrack helps you track calories, nutrition and fitness. Berry Dash is an endless runner with five candy worlds. Both are on Google Play.</p>
+    <ul class="stats" aria-label="Summary">
+      <li>2 apps on Google Play</li>
+      <li>Android</li>
+      <li>Separate privacy policy for each app</li>
+    </ul>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="tile t1"><img src="apps/fittrack/images/logo.svg" alt=""></div>
+    <div class="tile t2"><img src="apps/berry-dash/images/icon.png" alt=""></div>
+  </div>
+  </section>
 
-      <div class="device-stage" aria-hidden="false">
-        <div class="device"><img src="images/home.webp" width="640" height="1389" alt="FitTrack home screen showing the week, daily calorie total, water and sleep cards"></div>
-        <div class="chip chip-a"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h3l2-3h6l2 3h3v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg></i>Barcode and photo scan</div>
-        <div class="chip chip-b"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/></svg></i>AI nutrition coach</div>
-      </div>
-    </div>
-  </main>
-
-<section id="features" class="wrap" aria-labelledby="features-title" style="padding-top:0">
-  <div class="sec-head">
-    <span class="eyebrow">Features</span>
-    <h2 id="features-title">Everything you need in one calorie tracker</h2>
-    <p>Start with the food diary and add the rest as you need it. Most features feed your weekly summary, so every log adds up.</p>
-  </div>
-  <div class="bento">
-    <article class="card feature-hero wide">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M17 21V3c-2 1-3 3.5-3 6.5 0 1.8 1 2.5 3 2.5"/></svg></div>
-      <h3>Food diary that logs in seconds</h3>
-      <p>Search food databases, scan a barcode or snap a photo. Save the foods and recipes you eat most, and see calories, protein, carbs and fat for each meal.</p>
-      <ul>
-        <li>Search, barcode and photo logging</li>
-        <li>Saved foods and recipes for repeat meals</li>
-        <li>Daily totals against your calorie goal</li>
-      </ul>
-    </article>
-    <article class="card">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
-      <h3>AI nutrition coach</h3>
-      <p>Ask about your day, describe a meal or get ideas for dinner. Replies use your own logs and goals.</p>
-    </article>
-    <article class="card">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div>
-      <h3>Recipes and meal plans</h3>
-      <p>Build recipes, plan seven days of meals, and turn the plan into a grocery list.</p>
-    </article>
-    <article class="card">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div>
-      <h3>Water, sleep and workouts</h3>
-      <p>Track water toward your daily goal, log sleep and record exercise. Each one shows its own trend.</p>
-    </article>
-    <article class="card">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
-      <h3>Weight and progress</h3>
-      <p>Record weight, body measurements and progress photos. Watch the trend rather than the daily number.</p>
-    </article>
-    <article class="card">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></div>
-      <h3>Fasting timer</h3>
-      <p>Run intermittent fasting windows with a timer and alerts that match your schedule.</p>
-    </article>
-    <article class="card">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10 21a2 2 0 0 0 4 0"/></svg></div>
-      <h3>Reminders and supplements</h3>
-      <p>Keep a list of supplements and medication, and set your own reminders for anything you need to remember.</p>
-    </article>
-    <article class="card">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></div>
-      <h3>Friend challenges</h3>
-      <p>Join a challenge and see where you rank. Friends see only your username and challenge results.</p>
-    </article>
-    <article class="card">
-      <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8-4.3-4.1 5.9-.8z"/></svg></div>
-      <h3>Streaks and weekly summary</h3>
-      <p>Earn badges for consistent logging and read a weekly summary of what changed.</p>
-    </article>
-  </div>
-</section>
-
-<section class="band" aria-labelledby="how-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">How it works</span>
-      <h2 id="how-title">Log, learn, adjust</h2>
-      <p>The whole app follows one loop. Logs give the coach and summaries something to work with, and the results show you what to change.</p>
-    </div>
-    <div class="steps">
-      <div class="step"><span class="n">01</span><h3>Log your day</h3><p>Meals, water, sleep, workouts and weight, from one diary.</p></div>
-      <div class="step"><span class="n">02</span><h3>Get guidance</h3><p>The coach reads your logs and suggests the next small change.</p></div>
-      <div class="step"><span class="n">03</span><h3>Review the trend</h3><p>Charts and weekly summaries show what moved and what did not.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="screens" class="wrap" aria-labelledby="screens-title">
-  <div class="sec-head">
-    <span class="eyebrow">Screens</span>
-    <h2 id="screens-title">A look inside</h2>
-    <p>Screens from the FitTrack listing on Google Play. Swipe or scroll to see more.</p>
-  </div>
-  <div class="shots">
-    <figure class="shot">
-      <div class="phone"><img src="images/splash.webp" width="640" height="1380" loading="lazy" decoding="async" alt="FitTrack splash screen with the app logo and a tagline"></div>
-      <figcaption>Launch</figcaption>
-    </figure>
-    <figure class="shot">
-      <div class="phone"><img src="images/onboarding.webp" width="640" height="1371" loading="lazy" decoding="async" alt="FitTrack welcome screen with the headline Take Control of Your Health, feature chips and a Get Started button"></div>
-      <figcaption>Welcome</figcaption>
-    </figure>
-    <figure class="shot">
-      <div class="phone"><img src="images/gender.webp" width="640" height="1380" loading="lazy" decoding="async" alt="FitTrack setup screen asking for gender to personalise calorie targets"></div>
-      <figcaption>Personal setup</figcaption>
-    </figure>
-    <figure class="shot">
-      <div class="phone"><img src="images/home.webp" width="640" height="1389" loading="lazy" decoding="async" alt="FitTrack home screen showing the week, daily calorie total, water and sleep cards"></div>
-      <figcaption>Today's diary</figcaption>
-    </figure>
-    <figure class="shot">
-      <div class="phone"><img src="images/analytics.webp" width="640" height="1380" loading="lazy" decoding="async" alt="FitTrack analytics screen with current and goal weight and a body analysis gauge"></div>
-      <figcaption>Analytics</figcaption>
-    </figure>
-    <figure class="shot">
-      <div class="phone"><img src="images/recipes.webp" width="640" height="1367" loading="lazy" decoding="async" alt="FitTrack recipes screen with saved recipes and a community tab"></div>
-      <figcaption>Recipes</figcaption>
-    </figure>
-    <figure class="shot">
-      <div class="phone"><img src="images/reminders.webp" width="640" height="1380" loading="lazy" decoding="async" alt="FitTrack settings showing daily, meal and workout reminder controls"></div>
-      <figcaption>Reminders</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section id="privacy" class="band" aria-labelledby="privacy-title">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Privacy</span>
-      <h2 id="privacy-title">Your health data stays yours</h2>
-      <p>Health and fitness information is sensitive, so we keep the data we use limited to what the app needs.</p>
-    </div>
-    <div class="trust">
-      <article class="card">
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></div>
-        <h3>Never sold</h3>
-        <p>We do not sell your data. We never use your health data for advertising or build advertising profiles.</p>
-      </article>
-      <article class="card">
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
-        <h3>You choose what to share</h3>
-        <p>Health sync stays off until you turn it on. Friends see only your username, display name and challenge results.</p>
-      </article>
-      <article class="card">
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg></div>
-        <h3>Delete it any time</h3>
-        <p>Delete your account in Settings. Account data is removed within 30 days of your request.</p>
-      </article>
-    </div>
-    <p style="margin-top:18px"><a class="btn-ghost" href="privacy.html">Read the full privacy policy
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
-  </div>
-</section>
-
-<section id="apps" class="wrap" aria-labelledby="apps-title">
-  <div class="sec-head">
-    <span class="eyebrow">Our apps</span>
-    <h2 id="apps-title">Available on Google Play</h2>
-    <p>Download FitTrack for Android from the Play Store.</p>
-  </div>
-  <article class="app-card">
-    <img class="logo" src="images/logo.svg" width="96" height="96" alt="FitTrack app icon">
+  <div class="apps-head" id="apps">
     <div>
-      <span class="tag">Available now</span>
-      <h3>FitTrack</h3>
-      <p>A calorie, nutrition and fitness tracker with a food diary, an AI coach, meal plans and a fasting timer.</p>
+      <span class="eyebrow">Our apps</span>
+      <h2>Pick an app to get started</h2>
+    </div>
+  </div>
+
+  <div class="apps">
+    <article class="app fit" aria-labelledby="fit-title">
+      <div class="app-top">
+        <div class="app-icon"><img src="apps/fittrack/images/logo.svg" width="84" height="84" alt="FitTrack app icon"></div>
+        <div>
+          <span class="tag">Health and fitness</span>
+          <h3 id="fit-title">FitTrack</h3>
+        </div>
+      </div>
+      <p class="app-desc">A calorie, nutrition and fitness tracker with a food diary, an AI nutrition coach, meal plans and a fasting timer.</p>
       <ul>
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Works offline. Changes sync when you reconnect.</li>
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Health Connect sync for steps, active calories and sleep, if you turn it on.</li>
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Home screen widgets, plus backup and restore.</li>
       </ul>
-    </div>
-    <a class="btn" href="https://play.google.com/store/apps/details?id=com.gulshid.fittrack" target="_blank" rel="noopener">
-      <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.4 13.6 12 4.2 21.6c-.3-.2-.5-.6-.5-1V3.4c0-.4.2-.8.5-1zM15 10.6l2.5-2.5 3.9 2.2c.8.5.8 1.3 0 1.8l-3.9 2.2L15 13.4 12.7 12 15 10.6zM5 2.1l9.2 5.2-2.5 2.5L5 2.1zm0 19.8 6.7-7.4 2.5 2.5L5 21.9z"/></svg>
-      <span><small>Get it on</small><strong>Google Play</strong></span>
-    </a>
-  </article>
-  <article class="app-card" style="margin-top:16px">
-    <img class="logo" src="berry-dash/images/icon.png" width="96" height="96" alt="Berry Dash app icon">
-    <div>
-      <span class="tag">Available now</span>
-      <h3>Berry Dash</h3>
-      <p>An endless runner for Android. Jump, slide and switch lanes through five candy worlds, unlock characters and climb the global leaderboard.</p>
+      <div class="app-actions">
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.gulshid.fittrack" target="_blank" rel="noopener">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.4 13.6 12 4.2 21.6c-.3-.2-.5-.6-.5-1V3.4c0-.4.2-.8.5-1zM15 10.6l2.5-2.5 3.9 2.2c.8.5.8 1.3 0 1.8l-3.9 2.2L15 13.4 12.7 12 15 10.6zM5 2.1l9.2 5.2-2.5 2.5L5 2.1zm0 19.8 6.7-7.4 2.5 2.5L5 21.9z"/></svg>
+          <span><small>Get it on</small><strong>Google Play</strong></span>
+        </a>
+        <a class="details" href="apps/fittrack/">See FitTrack
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
+
+    <article class="app berry" aria-labelledby="berry-title">
+      <div class="app-top">
+        <div class="app-icon"><img src="apps/berry-dash/images/icon.png" width="84" height="84" alt="Berry Dash app icon"></div>
+        <div>
+          <span class="tag">Game</span>
+          <h3 id="berry-title">Berry Dash</h3>
+        </div>
+      </div>
+      <p class="app-desc">An endless runner for Android. Jump, slide and switch lanes through five candy worlds, unlock characters and climb the global leaderboard.</p>
       <ul>
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Five worlds and five playable characters.</li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Daily rewards, achievements, missions and seasonal events.</li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Global leaderboard for your best scores.</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Power-ups, daily rewards, achievements and missions.</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Global leaderboard and limited-time seasonal events.</li>
       </ul>
-      <p style="margin-top:14px"><a class="btn-ghost" href="berry-dash/">See the Berry Dash page</a></p>
-    </div>
-    <a class="btn" href="https://play.google.com/store/apps/details?id=com.gulshid.berry" target="_blank" rel="noopener">
-      <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.4 13.6 12 4.2 21.6c-.3-.2-.5-.6-.5-1V3.4c0-.4.2-.8.5-1zM15 10.6l2.5-2.5 3.9 2.2c.8.5.8 1.3 0 1.8l-3.9 2.2L15 13.4 12.7 12 15 10.6zM5 2.1l9.2 5.2-2.5 2.5L5 2.1zm0 19.8 6.7-7.4 2.5 2.5L5 21.9z"/></svg>
-      <span><small>Get it on</small><strong>Google Play</strong></span>
-    </a>
-  </article>
-</section>
-
-<section class="wrap" aria-labelledby="cta-title" style="padding-top:0">
-  <div class="closing">
-    <div>
-      <span class="eyebrow">Start today</span>
-      <h2 id="cta-title" style="margin-top:14px">Log your first meal in minutes</h2>
-      <p>Download FitTrack from Google Play, sign in with Google and set your goals.</p>
-    </div>
-    <a class="btn amber" href="https://play.google.com/store/apps/details?id=com.gulshid.fittrack" target="_blank" rel="noopener">
-      <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.4 13.6 12 4.2 21.6c-.3-.2-.5-.6-.5-1V3.4c0-.4.2-.8.5-1zM15 10.6l2.5-2.5 3.9 2.2c.8.5.8 1.3 0 1.8l-3.9 2.2L15 13.4 12.7 12 15 10.6zM5 2.1l9.2 5.2-2.5 2.5L5 2.1zm0 19.8 6.7-7.4 2.5 2.5L5 21.9z"/></svg>
-      <span><small>Get it on</small><strong>Google Play</strong></span>
-    </a>
+      <div class="app-actions">
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.gulshid.berry" target="_blank" rel="noopener">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.4 13.6 12 4.2 21.6c-.3-.2-.5-.6-.5-1V3.4c0-.4.2-.8.5-1zM15 10.6l2.5-2.5 3.9 2.2c.8.5.8 1.3 0 1.8l-3.9 2.2L15 13.4 12.7 12 15 10.6zM5 2.1l9.2 5.2-2.5 2.5L5 2.1zm0 19.8 6.7-7.4 2.5 2.5L5 21.9z"/></svg>
+          <span><small>Get it on</small><strong>Google Play</strong></span>
+        </a>
+        <a class="details" href="apps/berry-dash/">See Berry Dash
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
   </div>
-</section>
+
+  <section class="privacy" id="privacy" aria-labelledby="privacy-title">
+    <div>
+      <h2 id="privacy-title">Privacy policies</h2>
+      <p>Each app has its own privacy policy that explains what data it uses.</p>
+    </div>
+    <nav aria-label="Privacy policies">
+      <a href="apps/fittrack/privacy.html">FitTrack</a>
+      <a href="apps/berry-dash/privacy.html">Berry Dash</a>
+    </nav>
+  </section>
+</main>
 
 <footer class="wrap">
   <div class="foot">
-    <span>&copy; 2026 FitTrack</span>
-    <nav aria-label="Footer">
-      <a href="privacy.html">Privacy policy</a>
-      <a href="#features">Features</a>
-      <a href="mailto:gulshidzada4@gmail.com">Contact: gulshidzada4@gmail.com</a>
-    </nav>
+    <span>&copy; 2026 Gulshid Zada</span>
+    <span><a href="mailto:gulshidzada4@gmail.com">gulshidzada4@gmail.com</a></span>
   </div>
 </footer>
 </body>
